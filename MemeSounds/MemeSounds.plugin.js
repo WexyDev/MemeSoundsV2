@@ -1,19 +1,49 @@
 /**
- * @name MemeSounds
- * @version 0.5.9
- * @description Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!
- * @invite YMqKjWEVxG
+ * @name MemeSoundsV2
+ * @version 0.1.2
+ * @description Plays Memetastic sounds depending on what is being sent in chat. This Plugin is remake of Lonk's MemeSounds plugin so go check him out!
  * @author Lonk#6942
  * @authorId 557388558017495046
- * @authorLink https://github.com/Lonk12/
- * @source https://github.com/Lonk12/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js
- * @updateUrl https://raw.githubusercontent.com/Lonk12/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js
+ * @authorLink https://github.com/hamzadevcat/
+ * @source https://github.com/hamzadevcat/MemeSoundsV2/blob/main/MemeSounds/MemeSounds.plugin.js
+ * @updateUrl https://raw.githubusercontent.com/hamzadevcat/MemeSoundsV2/main/MemeSounds/MemeSounds.plugin.js
  */
 
-module.exports = (() => {
+ module.exports = (() => {
 	
 	/* Configuration */
-	const config = {info: {name: "Meme Sounds", authors: [{name: "Lonk#6942", discord_id: "557388558017495046", github_username: "Lonk12", twitter_username: "wolfyypaw"},{name: "FlyMaster#2642", discord_id: "459726660359553025", github_username: "Apceniy"}], version: "0.5.9", description: "Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!", github: "https://github.com/Lonk12/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js", github_raw: "https://raw.githubusercontent.com/Lonk12/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js"}, defaultConfig: [{id: "setting", name: "Sound Settings", type: "category", collapsible: true, shown: true, settings: [{id: "LimitChan", name: "Limit to the current channel only.", note: "When enabled, sound effects will only play within the currently selected channel.", type: "switch", value: true}, {id: "delay", name: "Sound effect delay.", note: "The delay in miliseconds between each sound effect.", type: "slider", value: 200, min: 10, max: 1000, renderValue: v => Math.round(v) + "ms"}, {id: "volume", name: "Sound effect volume.", note: "How loud the sound effects will be.", type: "slider", value: 1, min: 0.01, max: 1, renderValue: v => Math.round(v*100) + "%"}]}], changelog: [{title: "New Stuff", items: ["simplified the code", "fixed oof and bruh sounds not playing", "fixed sound timings", "fixed sounds not being played in the order they are written", "fixed sound overlapping", "added volume slider in settings"]}]};
+	const config = {
+		info: {
+			name: "Meme Sounds V2", 
+			authors: [{
+		name: "🎀 Hamza#7777", 
+		discord_id: "665294422749085696", 
+		github_username: "hamzadevcat", 
+		twitter_username: "hamzadevcat"}],
+		 version: "0.1.2",
+		 description: "Plays Memetastic sounds depending on what is being sent in chat. This Plugin is remake of Lonk's MemeSounds plugin so go check him out!",
+		  github: "https://github.com/hamzadevcat/MemeSoundsV2/blob/main/MemeSounds/MemeSounds.plugin.js",
+		  github_raw: "https://raw.githubusercontent.com/hamzadevcat/MemeSoundsV2/main/MemeSounds/MemeSounds.plugin.js"}, 
+		  defaultConfig: [{id: "setting", name: "Sound Settings", type: "category", collapsible: true, shown: true, 
+		  settings: [{
+			  id: "LimitChan", 
+			  name: "Limit to the current channel only.", 
+			  note: "When enabled, sound effects will only play within the currently selected channel.", 
+			  type: "switch", value: true}, 
+			  {
+				  id: "delay", 
+				  name: "Sound effect delay.", 
+				  note: "The delay in miliseconds between each sound effect.", 
+				  type: "slider", value: 200, min: 10, max: 1000, renderValue: v => Math.round(v) + "ms"}, 
+				  {
+					  id: "volume", 
+					  name: "Sound effect volume.", 
+					  note: "How loud the sound effects will be.", 
+					  type: "slider", value: 1, min: 0.01, max: 1, renderValue: v => Math.round(v*100) + "%"}]}], 
+					  changelog: [{
+						  title: "New Stuff", 
+						  items: ["meow"]
+						}]};
 
 	/* Library Stuff */
 	return !global.ZeresPluginLibrary ? class {
@@ -36,7 +66,10 @@ module.exports = (() => {
 				{re: /bazinga/gmi, file: "bazinga.mp3", duration: 550},
 				{re: /oof/gmi, file: "oof.mp3", duration: 250},
 				{re: /bruh/gmi, file: "bruh.mp3", duration: 470},
-				{re: /amogus/gmi, file: "amogus.mp3", duration: 7000}
+				{re: /amogus/gmi, file: "amogus.mp3", duration: 7000},
+				{re: /owo/gmi, file: "owo.mp3", duration: 2000},
+				{re: /shit/gmi, file: "fart.mp3", duration: 2000},
+				{re: /ok/gmi, file: "ok.mp3", duration: 1000},
 			];
 
 			/* Double message event fix */
@@ -68,7 +101,7 @@ module.exports = (() => {
 								queue.set(match.index, sound);
 						}
 						for (let sound of [...queue.entries()].sort((a, b) => a[0] - b[0])) {
-							let audio = new Audio("https://github.com/Lonk12/BetterDiscordPlugins/raw/main/MemeSounds/Sounds/"+sound[1].file);
+							let audio = new Audio("https://github.com/hamzadevcat/MemeSoundsV2/raw/main/MemeSounds/Sounds/"+sound[1].file);
 							audio.volume = this.settings.setting.volume;
 							audio.play();
 							await new Promise(r => setTimeout(r, sound[1].duration+this.settings.setting.delay));
