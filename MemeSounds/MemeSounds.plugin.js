@@ -70,6 +70,7 @@
 				{re: /owo/gmi, file: "owo.mp3", duration: 2000},
 				{re: /shit/gmi, file: "fart.mp3", duration: 2000},
 				{re: /ok/gmi, file: "ok.mp3", duration: 1000},
+				{re: /lets go/gmi, file: "letsgo.mp3", duration: 1500},
 			];
 
 			/* Double message event fix */
