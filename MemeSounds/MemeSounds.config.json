@@ -9,11 +9,11 @@
         }],
         "version": "0.5.3",
         "description": "Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!",
-        "github": "https://github.com/Lonk12/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js",
-        "github_raw": "https://raw.githubusercontent.com/Lonk12/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js"
+        "github": "https://github.com/hamzadevcat/MemeSoundsV2/blob/main/MemeSounds/MemeSounds.plugin.js",
+        "github_raw": "https://raw.githubusercontent.com/hamzadevcat/MemeSoundsV2/main/MemeSounds/MemeSounds.plugin.js"
     },
     "changelog": [
-        {"title": "New Stuff", "items": ["Added automatic updates", "Added changelog"]}
+        {"title": "New Stuff", "items": ["Ok, Shit and Amogus Sounds are added"]}
     ],
     "main": "MemeSounds.index.js"
 }
