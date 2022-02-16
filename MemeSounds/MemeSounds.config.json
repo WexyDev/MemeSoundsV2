@@ -1,0 +1,19 @@
+{
+    "info": {
+        "name": "MemeSoundsV2",
+        "authors": [{
+            "name": "🎀 Hamza#7777",
+            "discord_id": "665294422749085696",
+            "github_username": "hamzadevcat",
+            "twitter_username": "hamzadevcat"
+        }],
+        "version": "0.5.3",
+        "description": "Plays Memetastic sounds depending on what is being sent in chat. This was heavily inspired by the idea of Metalloriff's bruh plugin so go check him out!",
+        "github": "https://github.com/Lonk12/BetterDiscordPlugins/blob/main/MemeSounds/MemeSounds.plugin.js",
+        "github_raw": "https://raw.githubusercontent.com/Lonk12/BetterDiscordPlugins/main/MemeSounds/MemeSounds.plugin.js"
+    },
+    "changelog": [
+        {"title": "New Stuff", "items": ["Added automatic updates", "Added changelog"]}
+    ],
+    "main": "MemeSounds.index.js"
+}
