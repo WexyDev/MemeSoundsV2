@@ -2,8 +2,8 @@
  * @name MemeSoundsV2
  * @version 0.1.2
  * @description Plays Memetastic sounds depending on what is being sent in chat. This Plugin is remake of Lonk's MemeSounds plugin so go check him out!
- * @author Lonk#6942
- * @authorId 557388558017495046
+ * @author 🎀 Hamza#7777
+ * @authorId 665294422749085696
  * @authorLink https://github.com/hamzadevcat/
  * @source https://github.com/hamzadevcat/MemeSoundsV2/blob/main/MemeSounds/MemeSounds.plugin.js
  * @updateUrl https://raw.githubusercontent.com/hamzadevcat/MemeSoundsV2/main/MemeSounds/MemeSounds.plugin.js
